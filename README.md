@@ -30,11 +30,7 @@ It is possible to use a command in the following ways (order is not important)
 ``` bash
 ./co2-calculator --transportation-method bus --distance 1450 
 ```
-#### Test
 
-``` bash
-go test (-cover to see coverage)
-```
 #### Allowed car input
 
 | Small                   | Medium                   | Large                   | Misc. | 
@@ -43,3 +39,11 @@ go test (-cover to see coverage)
 | small-petrol-car        | medium-petrol-car        | large-petrol-car        |train|
 | small-plugin-hybrid-car | medium-plugin-hybrid-car | large-plugin-hybrid-car ||
 | small-electric-car      | medium-electric-car      | large-electric-car      ||
+
+#### Test
+
+Coverage is "only" 40% because there are no tests for the actual parsing of the arguments. This is handled by the flag package itself and only input validations are useful.
+
+``` bash
+go test (-cover to see coverage)
+```
